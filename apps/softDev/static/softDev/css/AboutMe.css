@@ -1,0 +1,348 @@
+:root{
+    --main-page-color-1: black;
+    --second-page-color-1: rgb(85, 0, 0);
+    --third-page-color-1: White;
+    --titles-font-color-1: white;
+    --paragraph-font-color-1: #555555;
+
+}
+body{
+    background-color: #000;
+}
+#page-container{
+    min-width: 360px;
+    background-color: black;
+    min-height: 100vh;
+    overflow: scroll;
+}
+nav{
+    background-color: var(--main-page-color-1);
+    margin:0px auto;
+    width: 100%;
+    /* border: solid white 2px; */
+    min-width: 350px;
+}
+
+li{
+    margin: 0px 15px;
+}
+
+.navbar-brand{
+    font-size: 2.5em;
+    color: white;
+}
+.containers > h2{
+    font-size: 2.25em;
+    text-decoration-line: underline;   
+}
+.containers{
+    font-size: 1.25em;
+    position: relative;
+    top: 90px;
+    /* border: solid white 2px; */
+    margin: 0px auto 54px auto;
+    width: 99%;
+    height: inherit;
+    text-align: center;
+    background-color: var(--second-page-color-1);
+    padding: 15px 20px 15px 10px;
+    color: var(--titles-font-color-1);
+}
+
+#pics{
+    width: 30%;
+    min-width: 150px;
+    display: inline-block;
+    margin: 15px auto;
+    background-color: var(--second-page-color-1);
+    padding: 15px;
+    /* border: solid black 2px; */
+    color: var(--paragraph-font-color-1); 
+    vertical-align: top;
+    position: relative;
+    top: -15px;
+}
+
+.photos > img, .photos > p{
+    width: 98%;
+    margin: 0px auto;
+    border: solid white 10px;
+    color:black;
+    background-color: white;
+}
+
+#info{
+    width: 69%;
+    min-width: 150px;
+    display: inline-block;
+    margin: 15px auto;
+    background-color: white;
+    padding: 25px 0px;
+    border: solid white 2px;
+    color: black; 
+    vertical-align: top;
+}
+
+#info > p{
+    width: 90%;
+    margin: 0px auto;
+    text-align: left;
+    line-height: 2.5em;
+}
+
+hr{
+    color: black;
+}
+
+footer{
+    position: fixed;
+    bottom:0%;
+    width:100%;
+    min-width: 360px;
+    height: inherit;
+    text-align: center;
+    background-color: var(--main-page-color-1);
+    padding: 5px 10px;
+    color: var(--titles-font-color-1);
+    /* border: solid white 2px; */
+    margin: 0px auto;
+}
+footer > p{
+    display: inline;
+    margin: 0px 15px;
+    font-size: 1.5em;
+}
+a > img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+@media only screen and (max-width: 684px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2.25em;
+        color: white;
+    }
+    .containers{
+        font-size: 1em;
+        top: 78px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+
+    .contact{
+        width: 90%;
+        min-width: 150px;
+        display: inline-block;
+        margin: 15px auto;
+        background-color: white;
+        padding: 15px;
+        border: solid black 2px; 
+        height: 435px;
+        color: var(--paragraph-font-color-1);
+    }
+    
+    footer{
+        width:100%;
+    }
+
+    #pics > img {
+        width: 98%;
+        margin: 10px auto;
+        border: solid white 10px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 611px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        font-size: 1em;
+        top: 92px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+    
+    .contact{
+        width: 90%;
+        min-width: 150px;
+        display: inline-block;
+        margin: 15px auto;
+        background-color: white;
+        padding: 15px;
+        border: solid black 2px; 
+        height: 435px;
+        color: var(--paragraph-font-color-1);
+    }
+    
+    footer{
+        width:100%;
+    }
+
+    #pics > img {
+        width: 98%;
+        margin: 10px auto;
+        border: solid white 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 597px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        font-size: 1em;
+        top: 78px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+
+    .contact{
+        width: 90%;
+        min-width: 150px;
+        display: inline-block;
+        margin: 15px auto;
+        background-color: white;
+        padding: 15px;
+        border: solid black 2px; 
+        height: 435px;
+        color: var(--paragraph-font-color-1);
+    }
+    
+    footer{
+        width:100%;
+    }
+
+    #pics > img {
+        width: 98%;
+        margin: 10px auto;
+        border: solid white 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 575px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        font-size: 1em;
+        top: 116px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+
+    .contact{
+        width: 90%;
+        min-width: 150px;
+        display: inline-block;
+        margin: 15px auto;
+        background-color: white;
+        padding: 15px;
+        border: solid black 2px; 
+        height: 435px;
+        color: var(--paragraph-font-color-1);
+    }
+    
+    footer{
+        width:100%;
+    }
+
+    #pics > img {
+        width: 98%;
+        margin: 10px auto;
+        border: solid white 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 520px) {
+
+    #pics{
+        display: none;
+    }
+    #info{
+        width: 90%;
+    }
+    #pics > img {
+        width: 98%;
+        margin: 10px auto;
+        border: solid black 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 457px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        font-size: 1em;
+        top: 174px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+
+
+    #pics{
+        display: none;
+    }
+    #info{
+        width: 90%;
+    }
+    
+    .contact{
+        width: 90%;
+        min-width: 150px;
+        display: inline-block;
+        margin: 15px auto;
+        background-color: white;
+        padding: 15px;
+        border: solid black 2px; 
+        height: 435px;
+        color: var(--paragraph-font-color-1);
+    }
+
+    footer{
+        width:100%;
+    }
+    
+}

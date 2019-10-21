@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=”description” content= ”The professional portfolio of Johnathan Williams.”>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Johnathan Williams</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'softDev/css/Home.css' %}">
+</head>
+<body>
+    <div id="page-container">
+        <nav class="navbar navbar-expand-sm fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'home' %}">Johnathan Williams</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{% url 'home' %}"> Home </a></li>
+                    <li><a href="{% url 'about' %}"> About Me </a></li>
+                    <li><a href="{% url 'resume' %}"> Resume </a></li>
+                    <li><a href="{% url 'workshop' %}"> The Workshop </a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content">
+            <div class="containers" id="index">
+                <h2>"Hello World!"</h2>
+                <div class="frames" id="pic">
+                    <img src="{% static 'softDev/images/PortfolioPic.jpg' %}" alt="Johnathan Williams Picture">
+                </div>
+                <div class="frames" id="text">
+                    <p> Welcome to my personal page! Here, you'll have plenty of information to help us get started with a conversation about how I may be of assistance to you.</p>
+                    <p> For starters, I'm a full-stack web developer in Python, C#, and JavaScript.</p>
+                    <p>Along with web development, I'm also interested in game and mobile app development, and will be adding projects to the <a href="{% url 'workshop' %}">workshop</a> as I make them.</p> 
+                    <p>Some passion projects that I plan to make, and/or would like to get involved in, are projects based in education, social justice (with an overlying theme of unity through mutual understanding),and environmental conservation.</p> 
+                    <p>As a former teacher, I have seen, first-hand, how there are limited resources that allow for deeper understanding of the sciences, without a massive budget. I would like to give students a chance for greater appreciation of the STEAM (Science, Technology, Engineering, Art, Math) subjects. A thing that came with being a biology teacher was a sense of responsibility for helping the environment, and trying to get others to care.</p>
+                    <p>My interest in social justice stems from all of the people that I have met, and come to love. I believe that all of our problems, are <strong>all of our</strong> problems. I wonder why we still live in a world of racism, sexism, and every other form of -ism that there is. Understanding the greatness of other cultures doesn't diminish the greatness of your own. Pride in one's self never needs to come at the expense of anybody else. I believe that if we all seek to understand others, we can destroy the fear and ignorance that bigotry is based on; and begin to admire the greatness that we all bring.</p>
+                    <p>We are all people on this planet, and this planet is our home. All of the other organisms on here are our neighbors, and play a big role in maintaining the balance of our planet. We, as Humans, have been bad neighbors, and have some making up to do for our actions.</p>
+                    <p>Feel free to look around, and get to know me a bit.</p> 
+                    <p><span style="color:#007BFF">Peace</span> and <span style="color:red">Love</span> to all! <strong>It all starts with finding both within yourself, for yourself.</strong> </p>
+                </div>
+            </div>
+        </div>  
+        <footer>
+                <p>Johnathan Williams 2019 </p>
+                <a href="https://www.linkedin.com/in/johnwill52" target="_blank"><img src="{% static 'softDev/images/LinkedInEmblem.png' %}" alt="Linked In Profile Link"></a>
+        </footer>
+    </div>
+    <script> 
+            $(document).ready(function(){
+
+                $('span').mouseenter(function(){
+                    $(this).addClass("hover");
+                    $(this).mouseleave(function(){
+                        $(this).removeClass("hover");
+                    })
+                })
+
+
+                
+        
+                
+            });
+            </script>
+    </body>
+    </html>
+    

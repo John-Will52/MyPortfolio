@@ -1,0 +1,361 @@
+:root{
+    --main-page-color-1: black;
+    --second-page-color-1: rgb(85, 0, 0);
+    --third-page-color-1: White;
+    --titles-font-color-1: white;
+    --paragraph-font-color-1: #555555;
+
+}
+body{
+    background-color: #000;
+}
+#page-container{
+    min-width: 360px;
+    background-color: black;
+    min-height: 100vh;
+    overflow: scroll;
+}
+nav{
+    background-color: var(--main-page-color-1);
+    margin:0px auto;
+    width: 100%;
+    /* border: solid white 2px; */
+    min-width: 350px;
+}
+
+li{
+    margin: 0px 15px;
+}
+
+.navbar-brand{
+    font-size: 2.5em;
+    color: white;
+}
+.main-button{
+    background-color: var(--second-page-color-1);
+    color: white;
+    border: none;
+    font-size: 2em;
+    /* border: solid white 2px; */
+    padding:0px;
+}
+.text-button{
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5em;
+    display: block;
+    margin: 10px 10px 10px 0px;
+}
+
+.hover{
+    border: solid 2px white;
+    background-color: white;
+    color: var(--second-page-color-1);
+    padding:0px
+}
+.other-hover{
+    background-color: var(--second-page-color-1);
+    border: solid var(--second-page-color-1) 2px;
+    color: white;
+    padding:0px;
+
+}
+
+#prizes{
+    font-size: 1.25em;
+}
+.containers > h2{
+    font-size: 2.25em;
+    text-decoration-line: underline;   
+}
+.containers{
+    position: relative;
+    top: 90px;
+    /* border: solid white 2px; */
+    margin: 0px auto 54px auto;
+    width: 99%;
+    height: inherit;
+    text-align: center;
+    background-color: var(--second-page-color-1);
+    padding: 15px 10px;
+    color: var(--titles-font-color-1);
+}
+
+
+.frames{
+    width: 76%;
+    min-width: 150px;
+    /* display: inline-block; */
+    margin: 15px auto;
+    background-color: var(--second-page-color-1);
+    padding: 0px;
+    /* border: solid White 2px; */
+    color: var(--paragraph-font-color-1); 
+    vertical-align: top;
+    text-align: left;
+}
+.frames > p, .frames > li{
+    font-size: 1em;
+}
+.clickables{
+    background-color: white;
+    width: 100%;
+    color: black;
+    padding: 10px;
+}
+
+#UNCC > img, #Coding-Dojo > img, #awards > img {
+    width: 98%;
+    margin: 10px auto;
+    border: solid white 10px;
+    max-width: 350px;
+}
+
+footer{
+    position: fixed;
+    bottom:0%;
+    width:100%;
+    min-width: 360px;
+    height: inherit;
+    text-align: center;
+    background-color: var(--main-page-color-1);
+    padding: 5px 10px;
+    color: var(--titles-font-color-1);
+    /* border: solid white 2px; */
+    margin: 0px auto;
+}
+footer > p{
+    display: inline;
+    margin: 0px 15px;
+    font-size: 1.5em;
+}
+a > img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+
+@media only screen and (max-width: 684px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        top: 78px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+    .containers > h2{
+        font-size: 2em;
+    }
+    .frames{
+        width: 90%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    
+    /* #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    } */
+    
+    footer{
+        width:100%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 611px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        top: 78px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+
+    .containers > h2{
+        font-size: 1.75em;
+    }
+    .frames{
+        width: 90%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    /* #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    } */
+    
+    footer{
+        width:100%;
+    }
+    
+}
+
+@media only screen and (max-width: 597px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        top: 78px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+    .containers > h2{
+        font-size: 1.75em;
+    }
+    .frames{
+        width: 90%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    /* #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    } */
+    
+    footer{
+        width:100%;
+    }
+    
+}
+
+@media only screen and (max-width: 575px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        top: 116px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+    .containers > h2{
+        font-size: 2.25em;
+        text-decoration-line: underline;   
+    }
+    .frames{
+        margin: 15px auto;
+        padding: 15px;
+    }
+    #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    }
+    .main-button{
+        background-color: var(--second-page-color-1);
+        color: white;
+        border: none;
+        font-size: 1.75em;
+        /* border: solid white 2px; */
+        padding:0px;
+    }
+    #one{
+        font-size: 1.5em;
+    }
+    .hover{
+        border: solid 2px white;
+        background-color: white;
+        color: var(--second-page-color-1);
+        padding:0px
+    }
+    
+    footer{
+        width:100%;
+    }
+    
+}
+
+@media only screen and (max-width: 457px) {
+    nav{
+        width: 100%;
+    }
+    .navbar-brand{
+        font-size: 2em;
+        color: white;
+    }
+    .containers{
+        top: 174px;
+        text-align: center;
+        background-color: var(--second-page-color-1);
+        padding: 15px 10px;
+        color: var(--titles-font-color-1);
+        width: 100%;
+    }
+    .containers > h2{
+        font-size: 1.75em;
+    }
+    .frames{
+        width: 90%;
+        display: block;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    }
+    .main-button{
+        background-color: var(--second-page-color-1);
+        color: white;
+        border: none;
+        font-size: 1.5em;
+        /* border: solid white 2px; */
+        padding:0px;
+    }
+    #one{
+        font-size: 1.33em;
+    }
+    .hover{
+        border: solid 2px white;
+        background-color: white;
+        color: var(--second-page-color-1);
+        padding:0px
+    }
+    footer{
+        width:100%;
+    }
+    
+}
