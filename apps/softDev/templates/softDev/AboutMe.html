@@ -28,70 +28,137 @@
                 </ul>
             </div>
         </nav>
-        <div id="content">
-            <div class="containers" id="index">
-                <h2>Get to Know Me</h2>
-                <div class="frames" id= "pics">
-                    <div class="photos">
-                        <img src="{% static 'softDev/images/MeCollage.jpg' %}" alt="Collage of Johnathan Williams">
-                        <p>Collage of me, being me.</p>
+                
+        <div class="containers" id="index">
+            <h2>Get to Know Me</h2>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                </ul>
+                      
+                        <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'softDev/images/MeCollage.jpg' %}" alt="Collage of Johnathan Williams">
+                    <div class="carousel-caption">
+                        <h3>Me Being Me</h3>
+                        <p>Always having a good time</p>
                     </div>
-                    <div class="photos">
-                        <img src="{% static 'softDev/images/BeachCollage.jpg' %}" alt="Collage of Johnathan Williams with his sisters at the beach">
-                        <p>Collage of a beach outing with my sisters.</p>
-                    </div>
-                    <div class="photos">
-                        <img src="{% static 'softDev/images/TokyoCollage.jpg' %}" alt="Tokyo vacation collage">
-                        <p>Collage of some of my favorite pictures from my trip to Tokyo.</p>
-                    </div>
-                    <div class="photos">
-                        <img src="{% static 'softDev/images/EuropeCollage.jpg' %}" alt="Europe vacation collage">
-                        <p>Collage of some of my favorite pictures from my trip throughout Europe.</p>
-                        <p>Paris, France; Berlin, Germany; Lviv, Ukraine; Oslo, Norway</p>
-                    </div>
-
                 </div>
-                <div class="frames" id="info">
-                    <h3>Introduction</h3>
+                <div class="carousel-item">
+                    <img src="{% static 'softDev/images/BeachCollage.jpg' %}" alt="Collage of Johnathan Williams with his sisters at the beach">
+                    <div class="carousel-caption">
+                        <h3>Beach Outing With My Sisters</h3>
+                        <p>Fun in the sun</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'softDev/images/TokyoCollage.jpg' %}" alt="Tokyo vacation collage">
+                    <div class="carousel-caption">
+                        <h3>Tokyo Favorites</h3>
+                        <p>My favorite pics from vactaion in Tokyo</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'softDev/images/EuropeCollage.jpg' %}" alt="Europe vacation collage">
+                    <div class="carousel-caption">
+                        <h3>Tokyo Favorites</h3>
+                        <p>My favorite pics from vactaion in Tokyo</p>
+                    </div>
+                </div>
+            </div>
+                      
+                            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </a>
+                      
+            </div>
+              <div class="frames">
+                <button class="main-button" id="Introduction" type = "button">Introduction</button>
+                <div class="clickables" id="intro">
                     <p>In general, I like to consider myself to have similar a similar background to most people: I was born, had ups and downs, and am constantly working towards being the best version of myself.</p>
                     <p>I was born in Los Angeles, CA, raised in the San Fernando Valley, went to high school in Fresno, went to college in Charlotte, NC, and now, I'm back where it all began. Albeit, I've moved a lot, I've found that I like change. It's a chance to meet new people, do new things, and learn. It's probably what's led to my love of travel, and foreign languages.</p>
                     <p>Throughout my adolescense, I had many dream careers that I wanted to pursue. As a child, I wanted to be a doctor, an architect, a chef, and an artist. As I grew up, I had more exposure to life, and faced my first close death, my aunt. She died from cancer when I was 10, and I changed my career aspirations to becoming a research scientist. From this, came my love for biology and chemistry. I felt that those were the 2 subjects that would allow me to be able to learn how to cure cancer. This dream lasted, until I went to college.</p>
                     <p>Near the end of my sophomore year, I started to have a change of heart for becoming a research scientist. In a sense, I felt as if I was betraying my aunt, and truly had to overcome a personal crisis; to a point that I contemplated dropping out of college, since I didn't know where to go from there. It wasn't until I met a woman, the headmistress of an electrician program that I applied for, who had done what I was trying to do, with the same motives, that I was able to make my choice. She told me she had retired from research, and became the headmistress of the program because, "it (the research) consumes you and your life." I understood her. My loss had already consumed me, and I knew that the research would eventually do the same. I had to get over the hurt, and make peace with my choice. After that, I re-enrolled for the upcoming semester, and changed my major to communication, with an emphasis on public relations.</p>
-                    <p>After changing my major, I began to study more foreign languages, and started to broaden my interests with more focus on connecting with others around the world. I <strong>did</strong> want to do international public relations, after all. With that, I finished college, and tried to pursue my new dream career.</p>
-                    <br>
-                    <hr>
-                    <br>
-                    <h3>Career Changes</h3>
+                    <p>After changing my major, I began to study more foreign languages, and started to broaden my interests with more focus on connecting with others around the world. I <strong>did</strong> want to do international public relations, after all. With that, I finished college, and tried to pursue my new dream career.</p>      
+                </div>
+            </div>
+
+            <div class="frames">
+                <button class="main-button" id="Career" type = "button">Career Changes</button>
+                <div class="clickables" id="changes">
                     <p>After college, I tried to pursue a public relations career, to no avail. I was able to get an internship with an agency, but nothing more. I kept getting rejected, and began to lose hope that I'd get a permanent position. So, feeling the pressure of being an unemployed, recent college-graduate, I began to look into other options.</p>
                     <p>I started to follow in my mother's footsteps, and became a high school biology teacher. Albeit, I learned communication with the focus on public relations, I learned a lot of applicable skills that prepared me for teaching. Teaching actually enhanced my understanding of both biology and communication. I began to believe that I had found where I belonged.</p>
-                    <br>
-                    <hr>
-                    <br>
-                    <h3>Why Software Development</h3>
+                </div>
+            </div>
+
+            <div class="frames">
+                <button class="main-button" id="Why" type = "button">Why Software Development</button>
+                <div class="clickables" id="software">
                     <p>I feel that every moment has led to me becoming a developer. My first encounter with coding was when I was at a summer pre-college class, and immediately hated it. I was thrown in, told what to type without any explanation, and was lost. While in college, my cousin was a computer science major, and I would glance at his screen while he would code, and it looked like he may as well have been typing in hieroglyphics. Even to his own admission, he hated coding. It wasn't until graduating college, leaving the public relations field, and getting into teaching that I was reintroduced to software development.</p>
-                    <p><strong>This time</strong>, I was at USC as a participant of the Research Experience for Teachers (RET) summer program, where we had a guest lecturer, and he brought Wallaby robots. We were given some basic commands to program the bot with, and some challenges, and I was COMPLETELY hooked! It was at that time that I realized that I'd found my calling, and made plans for my final career change. I decided to do my last year of teaching, while trying to learn coding independently with Codecademy. I wish that I knew what I know now, so I could've taught my students these amazing skills, or, at least have been able to prepare my own teaching materials, as I plan to do. However, I just did my best with what I had, and taught to the best of my abilities.</p>
+              <p><strong>This time</strong>, I was at USC as a participant of the Research Experience for Teachers (RET) summer program, where we had a guest lecturer, and he brought Wallaby robots. We were given some basic commands to program the bot with, and some challenges, and I was COMPLETELY hooked! It was at that time that I realized that I'd found my calling, and made plans for my final career change. I decided to do my last year of teaching, while trying to learn coding independently with Codecademy. I wish that I knew what I know now, so I could've taught my students these amazing skills, or, at least have been able to prepare my own teaching materials, as I plan to do. However, I just did my best with what I had, and taught to the best of my abilities.</p>
                     <p>Leaving my students was a hard thing to do, but I couldn't turn back. I was preparing for my next step by enrolling in, and graduating from <a href="https://www.codingdojo.com/" target="_blank" rel="noopener noreferrer">Coding Dojo</a>.</p>
-                    <br>
-                    <hr>
-                    <br>
-                    <h3>Looking to the Future</h3>
+                </div>
+            </div>
+
+            <div class="frames">
+                <button class="main-button" id="Looking" type = "button">Looking to the Future</button>
+                <div class="clickables" id="future">
                     <p>At this point, as I'm making this page, I'm looking to start my final career in the technology sector. I'm hoping to bring all of my experiences to a team, where I can start building experience, apps, and great working relationships!</p>
                     <p>Ultimately, with all of my skills, I believe that I will get into project management. I love coding, but I understand that project managers usually play the liason role between clients, and the development team. In order to be able to lead a development team, I need to understand how the development team works. A skill that I believe will set me apart from others, in that role, will be my ability to effectively communicate technical topics to non-technical clients. With having a great understanding of software development, and the ability to explain complex technical subjects in layman's terms, I will excel in every facet of project management.</p>
                     <p>I'll never stop coding, because I have found the thing that I can do for the rest of my life, happily; but I believe I'll become more interested in maximizing the potential in others, and coding with more entrepreneurial endeavors in mind.</p>
-                    <br>
-                    <hr>
-                    <br>
-                    <h3>Hobbies</h3>
-                    <p>I have too many hobbies to list, but I mainly <strong>LOVE</strong> singing, traveling, cooking, health and fitness, botany and genetics, learning about foreign cultures and foreign languages, cooking, playing (and soon, making) video games, and practicing many other forms of "Nerdology." I'm a scientist and an artist, and I believe that both practices can enhance each other. With software development, I feel that the better that you understand the science, the greater the quality of art you can produce. It's the perfect midpoint!</p>
-                    <p>In my free time, you can find me working out, keeping busy with learning something new, hanging out with my family and friends, or just relaxing on Xbox with Overwatch, Apex Legends, any of the Crash Bandicoot games, or binge-watching Hulu or Netflix. Overall, I try to enjoy every day, and make the best of every moment.</p>
                 </div>
             </div>
+
+            <div class="frames">
+                    <button class="main-button" id="Hobbies" type = "button">Hobbies</button>
+                    <div class="clickables" id="hobbies">
+                        <p>I have too many hobbies to list, but I mainly <strong>LOVE</strong> singing, traveling, cooking, health and fitness, botany and genetics, learning about foreign cultures and foreign languages, cooking, playing (and soon, making) video games, and practicing many other forms of "Nerdology." I'm a scientist and an artist, and I believe that both practices can enhance each other. With software development, I feel that the better that you understand the science, the greater the quality of art you can produce. It's the perfect midpoint!</p>
+                        <p>In my free time, you can find me working out, keeping busy with learning something new, hanging out with my family and friends, or just relaxing on Xbox with Overwatch, Apex Legends, any of the Crash Bandicoot games, or binge-watching Hulu or Netflix. Overall, I try to enjoy every day, and make the best of every moment.</p>
+                    </div>
+            </div>    
         </div>  
-        <footer>
+    <footer>
                 <p>Johnathan Williams 2019 </p>
                 <a href="https://www.linkedin.com/in/johnwill52" target="_blank"><img src="{% static 'softDev/images/LinkedInEmblem.png' %}" alt="Linked In Profile Link"></a>
-        </footer>
+    </footer>
     </div>
+<script> 
+    $(document).ready(function(){
+        $('.clickables').hide();  
+
+        $('.main-button').mouseenter(function(){
+            $(this).addClass("hover");
+            $(this).mouseleave(function(){
+                $(this).removeClass("hover");
+            })
+        })
+
+        $('#Introduction').click(function(){
+            $('#intro').toggle();
+        })
+        $('#Career').click(function(){
+            $('#changes').toggle();
+        })
+        $('#Why').click(function(){
+            $('#software').toggle();
+        })
+        $('#Looking').click(function(){
+            $('#future').toggle();
+        })
+        $('#Hobbies').click(function(){
+            $('#hobbies').toggle();
+        })
+    });
+</script>
     </body>
     </html>
     

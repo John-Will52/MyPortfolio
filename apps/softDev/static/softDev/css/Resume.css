@@ -38,6 +38,7 @@ li{
     font-size: 2em;
     /* border: solid white 2px; */
     padding:0px;
+    margin: 10px 0px;
 }
 .text-button{
     background-color: white;
@@ -73,7 +74,7 @@ li{
     position: relative;
     top: 90px;
     /* border: solid white 2px; */
-    margin: 0px auto 54px auto;
+    margin: 0px auto 38px auto;
     width: 99%;
     height: inherit;
     text-align: center;
@@ -124,15 +125,16 @@ footer{
     color: var(--titles-font-color-1);
     /* border: solid white 2px; */
     margin: 0px auto;
+    z-index: 1;
 }
 footer > p{
     display: inline;
     margin: 0px 15px;
-    font-size: 1.5em;
+    font-size: .75em;
 }
 a > img{
-    width: 1.5em;
-    height: 1.5em;
+    width: .75em;
+    height: .75em;
 }
 
 
