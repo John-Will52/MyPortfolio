@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,64 +11,459 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Johnathan Williams</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'softDev/css/Home.css' %}">
+    <link rel="stylesheet" href="{% static 'softDev/css/Home.css' %}"> 
 </head>
 <body>
+<!-- NAVBAR START -->
     <div id="page-container">
         <nav class="navbar navbar-expand-sm fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{% url 'home' %}">Johnathan Williams</a>
+                    <a class="navbar-brand" href="#Welcome">Johnathan Williams</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{% url 'home' %}"> Home </a></li>
-                    <li><a href="{% url 'about' %}"> About Me </a></li>
-                    <li><a href="{% url 'resume' %}"> Resume </a></li>
-                    <li><a href="{% url 'workshop' %}"> The Workshop </a></li>
+                    <li class="active" onclick="showWelcome()"><a href="#Welcome"> Home </a></li>
+                    <li onclick="showAbout()"><a href="#About"> About Me </a></li>
+                    <li onclick="showResume()"><a href="#Resume"> Resume </a></li>
+                    <li onclick="showWorkshop()"><a href="#Workshop"> The Workshop </a></li>
                 </ul>
             </div>
         </nav>
-        <div id="content">
-            <div class="containers" id="index">
-                <h2>"Hello World!"</h2>
-                <div class="frames" id="pic">
-                    <img src="{% static 'softDev/images/PortfolioPic.jpg' %}" alt="Johnathan Williams Picture">
-                </div>
-                <div class="frames" id="text">
-                    <p> Welcome to my personal page! Here, you'll have plenty of information to help us get started with a conversation about how I may be of assistance to you.</p>
-                    <p> For starters, I'm a full-stack web developer in Python, C#, and JavaScript.</p>
-                    <p>Along with web development, I'm also interested in computer vision, game, and mobile app development, and will be adding projects to the <a href="{% url 'workshop' %}">workshop</a> as I make them.</p> 
-                    <p>Some passion projects that I plan to make, and/or would like to get involved in, are projects based in education, social justice (with an overlying theme of unity through mutual understanding),and environmental conservation.</p> 
-                    <p>As a former teacher, I have seen, first-hand, how there are limited resources that allow for deeper understanding of the sciences, without a massive budget. I would like to give students a chance for greater appreciation of the STEAM (Science, Technology, Engineering, Art, Math) subjects. A thing that came with being a biology teacher was a sense of responsibility for helping the environment, and trying to get others to care.</p>
-                    <p>My interest in social justice stems from all of the people that I have met, and come to love. I believe that all of our problems, are <strong>all of our</strong> problems. I wonder why we still live in a world of racism, sexism, and every other form of -ism that there is. Understanding the greatness of other cultures doesn't diminish the greatness of your own. Pride in one's self never needs to come at the expense of anybody else. I believe that if we all seek to understand others, we can destroy the fear and ignorance that bigotry is based on; and begin to admire the greatness that we all bring.</p>
-                    <p>We are all people on this planet, and this planet is our home. All of the other organisms on here are our neighbors, and play a big role in maintaining the balance of our planet. We, as Humans, have been bad neighbors, and have some making up to do for our actions.</p>
-                    <p>Feel free to look around, and get to know me a bit.</p> 
-                    <p><span style="color:#007BFF">Peace</span> and <span style="color:red">Love</span> to all! <strong>It all starts with finding both within yourself, for yourself.</strong> </p>
+<!-- NAVBAR END / WELCOME START -->
+    <div class="content" id="Welcome">
+        <div class="containers">
+            <h2>"Hello World!"</h2>
+            <div class="frames" id="pic">
+                <img src="{% static 'softDev/images/PortfolioPic.jpg' %}" alt="Johnathan Williams Picture">
+            </div>
+            <div class="frames" id="text">
+                <p> Welcome to my personal page! Here, you'll have plenty of information to help us get started with a conversation about how I may be of assistance to you.</p>
+                <p> For starters, I'm a full-stack web developer in Python, C#, and JavaScript.</p>
+                <p>Along with web development, I'm also interested in computer vision, game, and mobile app development, and will be adding projects to the <a href="#Workshop">workshop</a> as I make them.</p> 
+                <p>Some passion projects that I plan to make, and/or would like to get involved in, are projects based in education, social justice (with an overlying theme of unity through mutual understanding),and environmental conservation.</p> 
+                <p>As a former teacher, I have seen, first-hand, how there are limited resources that allow for deeper understanding of the sciences, without a massive budget. I would like to give students a chance for greater appreciation of the STEAM (Science, Technology, Engineering, Art, Math) subjects. A thing that came with being a biology teacher was a sense of responsibility for helping the environment, and trying to get others to care.</p>
+                <p>My interest in social justice stems from all of the people that I have met, and come to love. I believe that all of our problems, are <strong>all of our</strong> problems. I wonder why we still live in a world of racism, sexism, and every other form of -ism that there is. Understanding the greatness of other cultures doesn't diminish the greatness of your own. Pride in one's self never needs to come at the expense of anybody else. I believe that if we all seek to understand others, we can destroy the fear and ignorance that bigotry is based on; and begin to admire the greatness that we all bring.</p>
+                <p>We are all people on this planet, and this planet is our home. All of the other organisms on here are our neighbors, and play a big role in maintaining the balance of our planet. We, as Humans, have been bad neighbors, and have some making up to do for our actions.</p>
+                <p>Feel free to look around, and get to know me a bit.</p> 
+                <p><span style="color:#007BFF">Peace</span> and <span style="color:red">Love</span> to all! <strong>It all starts with finding both within yourself, for yourself.</strong> </p>
+            </div>
+        </div>
+    </div>
+<!-- WELCOME END / ABOUT ME START -->
+    <div class="content" id="About">
+        <div class="containers" >
+            <h2>Get to Know Me</h2>
+            <!-- CAROUSEL START -->
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                </ul>        
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'softDev/images/MeCollage.jpg' %}" alt="Collage of Johnathan Williams">
+                        <div class="carousel-caption">
+                            <h3>Me Being Me</h3>
+                            <p>Always having a good time</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img id="beach" src="{% static 'softDev/images/BeachCollage.jpg' %}" alt="Collage of Johnathan Williams with his sisters at the beach">
+                        <div class="carousel-caption">
+                            <h3>Beach Outing With My Sisters</h3>
+                            <p>Fun in the sun</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'softDev/images/TokyoCollage.jpg' %}" alt="Tokyo vacation collage">
+                        <div class="carousel-caption">
+                            <h3>Tokyo Favorites</h3>
+                            <p>My favorite pics from vacation in Tokyo</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'softDev/images/EuropeCollage.jpg' %}" alt="Europe vacation collage">
+                        <div class="carousel-caption">
+                            <h3>Tokyo Favorites</h3>
+                            <p>My favorite pics from vacation througout Europe</p>
+                        </div>
+                    </div>
+                </div>         
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>         
+            </div>
+            <!-- CAROUSEL END / ABOUT ME TEXT START -->
+            <div class="frames">
+                <button class="main-button" id="Introduction" type = "button">Introduction</button>
+                <div class="clickables" id="intro">
+                    <p>In general, I like to consider myself to have similar a similar background to most people: I was born, had ups and downs, and am constantly working towards being the best version of myself.</p>
+                    <p>I was born in Los Angeles, CA, raised in the San Fernando Valley, went to high school in Fresno, went to college in Charlotte, NC, and now, I'm back where it all began. Albeit, I've moved a lot, I've found that I like change. It's a chance to meet new people, do new things, and learn. It's probably what's led to my love of travel, and foreign languages.</p>
+                    <p>Throughout my adolescense, I had many dream careers that I wanted to pursue. As a child, I wanted to be a doctor, an architect, a chef, and an artist. As I grew up, I had more exposure to life, and faced my first close death, my aunt. She died from cancer when I was 10, and I changed my career aspirations to becoming a research scientist. From this, came my love for biology and chemistry. I felt that those were the 2 subjects that would allow me to be able to learn how to cure cancer. This dream lasted, until I went to college.</p>
+                    <p>Near the end of my sophomore year, I started to have a change of heart for becoming a research scientist. In a sense, I felt as if I was betraying my aunt, and truly had to overcome a personal crisis; to a point that I contemplated dropping out of college, since I didn't know where to go from there. It wasn't until I met a woman, the headmistress of an electrician program that I applied for, who had done what I was trying to do, with the same motives, that I was able to make my choice. She told me she had retired from research, and became the headmistress of the program because, "it (the research) consumes you and your life." I understood her. My loss had already consumed me, and I knew that the research would eventually do the same. I had to get over the hurt, and make peace with my choice. After that, I re-enrolled for the upcoming semester, and changed my major to communication, with an emphasis on public relations.</p>
+                    <p>After changing my major, I began to study more foreign languages, and started to broaden my interests with more focus on connecting with others around the world. I <strong>did</strong> want to do international public relations, after all. With that, I finished college, and tried to pursue my new dream career.</p>      
                 </div>
             </div>
-        </div>  
-        <footer>
-                <p>Johnathan Williams 2019 </p>
-                <a href="https://www.linkedin.com/in/johnwill52" target="_blank"><img src="{% static 'softDev/images/LinkedInEmblem.png' %}" alt="Linked In Profile Link"></a>
-        </footer>
+                
+            <div class="frames">
+                <button class="main-button" id="Career" type = "button">Career Changes</button>
+                <div class="clickables" id="changes">
+                    <p>After college, I tried to pursue a public relations career, to no avail. I was able to get an internship with an agency, but nothing more. I kept getting rejected, and began to lose hope that I'd get a permanent position. So, feeling the pressure of being an unemployed, recent college-graduate, I began to look into other options.</p>
+                    <p>I started to follow in my mother's footsteps, and became a high school biology teacher. Albeit, I learned communication with the focus on public relations, I learned a lot of applicable skills that prepared me for teaching. Teaching actually enhanced my understanding of both biology and communication. I began to believe that I had found where I belonged.</p>
+                </div>
+            </div>
+            
+            <div class="frames">
+                <button class="main-button" id="Why" type = "button">Why Software Development</button>
+                <div class="clickables" id="software">
+                    <p>I feel that every moment has led to me becoming a developer. My first encounter with coding was when I was at a summer pre-college class, and immediately hated it. I was thrown in, told what to type without any explanation, and was lost. While in college, my cousin was a computer science major, and I would glance at his screen while he would code, and it looked like he may as well have been typing in hieroglyphics. Even to his own admission, he hated coding. It wasn't until graduating college, leaving the public relations field, and getting into teaching that I was reintroduced to software development.</p>
+                    <p><strong>This time</strong>, I was at USC as a participant of the Research Experience for Teachers (RET) summer program, where we had a guest lecturer, and he brought Wallaby robots. We were given some basic commands to program the bot with, and some challenges, and I was COMPLETELY hooked! It was at that time that I realized that I'd found my calling, and made plans for my final career change. I decided to do my last year of teaching, while trying to learn coding independently with Codecademy. I wish that I knew what I know now, so I could've taught my students these amazing skills, or, at least have been able to prepare my own teaching materials, as I plan to do. However, I just did my best with what I had, and taught to the best of my abilities.</p>
+                    <p>Leaving my students was a hard thing to do, but I couldn't turn back. I was preparing for my next step by enrolling in, and graduating from <a href="https://www.codingdojo.com/" target="_blank" rel="noopener noreferrer">Coding Dojo</a>.</p>
+                </div>
+            </div>
+            
+            <div class="frames">
+                <button class="main-button" id="Looking" type = "button">Looking to the Future</button>
+                <div class="clickables" id="future">
+                    <p>At this point, as I'm making this page, I'm looking to start my final career in the technology sector. I'm hoping to bring all of my experiences to a team, where I can start building experience, apps, and great working relationships!</p>
+                    <p>Ultimately, with all of my skills, I believe that I will get into project management. I love coding, but I understand that project managers usually play the liason role between clients, and the development team. In order to be able to lead a development team, I need to understand how the development team works. A skill that I believe will set me apart from others, in that role, will be my ability to effectively communicate technical topics to non-technical clients. With having a great understanding of software development, and the ability to explain complex technical subjects in layman's terms, I will excel in every facet of project management.</p>
+                    <p>I'll never stop coding, because I have found the thing that I can do for the rest of my life, happily; but I believe I'll become more interested in maximizing the potential in others, and coding with more entrepreneurial endeavors in mind.</p>
+                </div>
+            </div>
+            
+            <div class="frames">
+                <button class="main-button" id="Hobbies" type = "button">Hobbies</button>
+                <div class="clickables" id="hobbies">
+                    <p>I have too many hobbies to list, but I mainly <strong>LOVE</strong> singing, traveling, cooking, health and fitness, botany and genetics, learning about foreign cultures and foreign languages, cooking, playing (and soon, making) video games, and practicing many other forms of "Nerdology." I'm a scientist and an artist, and I believe that both practices can enhance each other. With software development, I feel that the better that you understand the science, the greater the quality of art you can produce. It's the perfect midpoint!</p>
+                    <p>In my free time, you can find me working out, keeping busy with learning something new, hanging out with my family and friends, or just relaxing on Xbox with Overwatch, Apex Legends, any of the Crash Bandicoot games, or binge-watching Hulu or Netflix. Overall, I try to enjoy every day, and make the best of every moment.</p>
+                </div>
+            </div>    
+        </div> 
     </div>
-    <script> 
-            $(document).ready(function(){
-
-                $('span').mouseenter(function(){
-                    $(this).addClass("hover");
-                    $(this).mouseleave(function(){
-                        $(this).removeClass("hover");
-                    })
-                })
-
-
+<!-- ABOUT ME END / RESUME START -->
+    <div class="content" id="Resume">
+        <div class="containers">
+            <h2>Resume</h2>
+            <div class="frames">
+                <button class="main-button" id="one" type ="button">Languages and Frameworks</button>
+                <div class="clickables" id="LangFrames">
+                    <button class="text-button" id="FELs">Front End Essentials</button>
+                    <div class="clickables" id="FELangs">
+                        <ul>
+                            <li>HTML 5</li>
+                            <li>CSS 3</li>
+                            <li>JavaScript</li>                                    <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                <button class="text-button" id="sharp">C#</button>
+                    <div class="clickables" id="cSharp">
+                            <ul>
+                                <li>ASP/.NET</li>
+                                <li>Entity Framework Core</li>
+                                <li>LINQ</li>
+                                <li>Basic Unity knowledge</li>
+                                <li>Some exposure to Xamarin</li>
+                            </ul>
+                        </div>
+                        <button class="text-button" id="snake">Python</button>
+                        <div class="clickables" id="python">
+                            <ul>
+                                <li>Flask</li>
+                                <li>Django</li>
+                                <li>Some exposure to Kivy</li>
+                            </ul>
+                        </div>
+                        <button class="text-button" id="js">JavaScript</button>
+                        <div class="clickables" id="javascript">
+                            <ul>
+                                <li>MongoDB</li>
+                                <li>Express</li>
+                                <li>Angular 6</li>
+                                <li>Node</li>
+                                <li>JQuery</li>
+                                <li>TypeScript</li>
+                            </ul>
+                        </div>
+                        <button class="text-button" id="currently">Currently Studying</button>
+                        <div class="clickables" id="studying">
+                            <ul>
+                                <li>iOS Swift</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="frames">
+                    <button class="main-button" id="two" type = "button">Databases</button>
+                    <div class="clickables" id="DBs">
+                        <button class="text-button" id="SQL">SQL</button>
+                        <div class="clickables" id="SQLs">
+                            <ul>
+                                <li>MySQL</li>
+                                <li>NoSQL</li>
+                                <li>SQL Lite</li>
+                            </ul>
+                        </div>
+                        <button class="text-button" id="mongo">MongoDB</button>
+                    </div>
+                </div>
+                <div class="frames">
+                    <button class="main-button" id="three" type = "button">Methodologies</button>
+                    <div class="clickables" id="methods">
+                        <ul>
+                            <li>Strong understanding of OOP</li>
+                            <li>Familiar with MVC/MTV file organizations</li>
+                            <li>Responsive Design with a "Mobile-first mindset"</li>
+                            <li>Comfortable with using and making RESTful APIs and all CRUD operations</li>
+                            <li>Familiar with <strong>Agile</strong> and <strong>Waterfall</strong> methodologies</li>
+                        </ul>
+                    </div>
+                </div>
                 
+                <div class="frames">
+                    <button  class="main-button" id="four" type = "button">Other Tech-Related Skills</button>
+                    <div class="clickables" id="others">
+                        <ul>
+                            <li>Deployment with AWS - EC2</li>
+                            <li>GitHub familiarity</li>
+                            <li>Comfortable with Windows and iOS environments</li>
+                            <li>IDE of choice: VS Code. Familiar with Visual Studio, and Xcode.</li>
+                            <li>Familiar with MySQL Workbench</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="frames">
+                    <button class="main-button" id="six" type= "button">Non-Tech-Related Skills</button>
+                    <div class="clickables" id="nonTech">
+                        <ul>
+                            <li>Very well-versed with research on a variety of subjects</li>
+                            <li>Native language: English</li>
+                            <li>Near bilingual proficiency in Spanish</li>
+                            <li>Conversational proficiency in French and Russian</li>
+                            <li>Great communication skills - Strong ability to convert technical concepts into layman's terms, or provide relevant symbols or comparisons.</li>
+                            <li>Great team player and team spirit built from 12 years of playing Football</li>
+                            <li>Positive attitude, and approaches everybody, from <strong>all</strong> walks of life with universal respect</li>
+                        </ul>
+                    </div>
+                </div>  
+                                          
+                <div class="frames">
+                    <button class="main-button" id="five" type = "button">Background</button>
+                    <div class="clickables" id="background">
+                        <button class="text-button" type="button" id="jobs">Work History</button>
+                        <div class="clickables" id="work-history">
+                            <h5>Susan Miller Dorsey High School</h5>
+                            <div id="Dorsey">
+                                <h6>Biology Teacher (April 2017 - June 2019)</h6>
+                                <p>As a teacher, I played many roles at once. My main duty was to prepare lessons in alignment with the Next Generation Science Standards (NGSS); but some of the other roles I filled to help my students included:</p>
+                                <ul>
+                                    <li><strong>A counselor</strong> by looking through my students' transcripts and explaining what they needed to do to stay on track, or to catch up.</li>
+                                    <li><strong>A therapist</strong> by always making myself available to them to talk through their problems, and offer them the best advice that benefitted them.</li>
+                                    <li><strong>An interpretor</strong>. We had a new student check in to our school from Belarus, and I was the only Russian-speaking person on campus, so I helped enroll him.</li>
+                                    <li><strong>An older brother/mentor</strong> by generally being there for them by telling them what they needed to hear, even if it wasn't what they wanted to hear. I would even have conferences with their other teachers with them present to come up with plans to help them succeed if they were struggling.</li>
+                                </ul> 
+                                <p>My driving belief was that I was there to do what was best for my students. In education, they are the clients, and I was always willing to go above and beyond for them.</p>
+                                <p>Day to day, I was very flexible, and easily adapted to the many variables that each day could bring, all while maintaining a positive demeanor, and professionalism at all times. As a teacher, I experienced a lot of professional and personal growth by learning from my students, as they were learning from me.</p>
+                                <button class="text-button" type="button" id="prizes">Awards</button>
+                                <div class="clickables" id="awards">
+                                    <img src="{% static 'softDev/images/TeachingAward1.jpg' %}" alt="Johnathan Williams's teaching award for exemplory performance.">
+                                    <img src="{% static 'softDev/images/TeachingAward2.jpg' %}" alt="Johnathan Williams's teaching award, recieved for being nominated by a student-athlete for making a positive impact.">
+                                </div>
+                            </div>
+                            <br>
+                            <hr>
+                            <br>
+                            <h5>Blaze PR</h5>
+                            <div id="Blaze">
+                                <h6>Account Coordinator Intern (October 2016 - January 2017)</h6>
+                                <p>As an intern, my role was to assist the account manager with various tasks, such as:</p>
+                                <ul>
+                                    <li>researching relevant social media influencers to promote brands</li>
+                                    <li>researching relevant audiences for clients</li>
+                                    <li>writing press releases</li>
+                                    <li>helping with event planning</li>
+                                    <li>social media management</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <button class="text-button" type="button" id="edu">Education</button>
+                        <div class="clickables" id="education">
+                            <h5>Coding Dojo</h5>
+                            <p>June 2019 - September 2019</p>
+                            <div id="Coding-Dojo">
+                                <img src="{% static 'softDev/images/Certificate.jpg' %}" alt="Certificate of completion from Coding Dojo.">
+                            </div>
+                            <br>
+                            <hr>
+                            <br>
+                            <h5>University of North Carolina at Charlotte</h5>
+                            <p>August 2011 - August 2016</p>
+                            <div id="UNCC">
+                                <img src="{% static 'softDev/images/Degree.jpg' %}" alt="Communication degree from University of North Carolina at Charlotte.">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+        </div> 
+        <!-- RESUME END / WORKSHOP START -->
         
-                
-            });
-            </script>
-    </body>
-    </html>
+        <div class="containers"id="Workshop">
+            <h2>Workshop</h2>
+            <h1>Good things coming soon!</h1>
+        </div>
+    </div>   
+
+        <!-- FOOTER -->
+    <footer>
+            <p>Johnathan Williams 2019 </p>
+            <a href="https://www.linkedin.com/in/johnwill52" target="_blank"><img src="{% static 'softDev/images/LinkedInEmblem.png' %}" alt="Linked In Profile Link"></a>
+    </footer>
+    </div>
+<!-- END OF PAGE CONTENTS -->
+    <script> 
+        document.getElementById("About").style.display = "none";
+        document.getElementById("Resume").style.display = "none";
+        document.getElementById("Workshop").style.display = "none";
+
+
+        function showWelcome(){
+            document.getElementById("About").style.display = "none";
+            document.getElementById("Resume").style.display = "none";
+            document.getElementById("Workshop").style.display = "none";
+            document.getElementById("Welcome").style.display = "block";
+        }
+        function showAbout(){
+            document.getElementById("Resume").style.display = "none";
+            document.getElementById("Workshop").style.display = "none";
+            document.getElementById("Welcome").style.display = "none";
+            document.getElementById("About").style.display = "block";
+        }
+        function showResume(){
+            document.getElementById("About").style.display = "none";
+            document.getElementById("Workshop").style.display = "none";
+            document.getElementById("Welcome").style.display = "none";
+            document.getElementById("Resume").style.display = "block";
+        }
+        function showWorkshop(){
+            document.getElementById("About").style.display = "none";
+            document.getElementById("Resume").style.display = "none";
+            document.getElementById("Welcome").style.display = "none";
+            document.getElementById("Workshop").style.display = "block";
+        }
+        $(document).ready(function(){
+        $('.clickables').hide();  
+
+        $('.main-button').mouseenter(function(){
+            $(this).addClass("hover");
+            $(this).mouseleave(function(){
+                $(this).removeClass("hover");
+            })
+        })
+
+        $('#Introduction').click(function(){
+            $('#intro').toggle();
+        })
+        $('#Career').click(function(){
+            $('#changes').toggle();
+        })
+        $('#Why').click(function(){
+            $('#software').toggle();
+        })
+        $('#Looking').click(function(){
+            $('#future').toggle();
+        })
+        $('#Hobbies').click(function(){
+            $('#hobbies').toggle();
+        })
+        $('.text-button').mouseenter(function(){
+            $(this).addClass("other-hover");
+            $(this).mouseleave(function(){
+                $(this).removeClass("other-hover");
+            })
+        })
+        $('#prizes').mouseenter(function(){
+            $(this).addClass("other-hover");
+            $(this).mouseleave(function(){
+                $(this).removeClass("other-hover");
+            })
+        })
+        $('span').mouseenter(function(){
+            $(this).addClass("text-hover");
+            $(this).mouseleave(function(){
+                $(this).removeClass("text-hover");
+            })
+        })
+        
+
+        $('#one').click(function(){
+            $('#LangFrames').toggle();
+            $('#FELangs').toggle();
+            $('#cSharp').toggle();
+            $('#python').toggle();
+            $('#javascript').toggle();
+            $('#studying').toggle();
+        })
+
+        $('#two').click(function(){
+            $('#DBs').toggle();
+            $('#SQLs').toggle();
+        })
+        $('#three').click(function(){
+            $('#methods').toggle();
+        })
+        $('#four').click(function(){
+            $('#others').toggle();
+        })
+        $('#six').click(function(){
+            $('#nonTech').toggle();
+        })
+        $('#five').click(function(){
+            $('#background').toggle();
+            $('#work-history').toggle();
+            $('#awards').toggle();
+            $('#education').toggle();
+        })
+        $('#FELs').click(function(){
+            $('#FELangs').toggle();
+        })
+        $('#sharp').click(function(){
+            $('#cSharp').toggle();
+        })
+        $('#snake').click(function(){
+            $('#python').toggle();
+        })
+        $('#js').click(function(){
+            $('#javascript').toggle();
+        })
+        $('#currently').click(function(){
+            $('#studying').toggle();
+        })
+        $('#SQL').click(function(){
+            $('#SQLs').toggle();
+        })
+        $('#jobs').click(function(){
+            $('#work-history').toggle();
+        })
+        $('#prizes').click(function(){
+            $('#awards').toggle();
+        })
+        $('#edu').click(function(){
+            $('#education').toggle();
+        })
+    });
+
+    </script>
+</body>
+</html>
     

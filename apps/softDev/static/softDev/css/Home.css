@@ -6,14 +6,17 @@
     --paragraph-font-color-1: #555555;
 
 }
+html{
+    scroll-behavior: smooth;
+
+}
 body{
     background-color: #000;
 }
 #page-container{
-    min-width: 350px;
+    min-width: 384px;
     background-color: black;
     min-height: 100vh;
-    overflow: scroll;
 }
 nav{
     background-color: var(--main-page-color-1);
@@ -35,7 +38,7 @@ li{
 .containers{
     font-size: 1.25em;
     position: relative;
-    top: 90px;
+    top: 86px;
     /* border: solid white 2px; */
     margin: 0px auto 38px auto;
     width: 99%;
@@ -50,10 +53,118 @@ li{
     text-decoration-line: underline;   
 }
 
-.hover{
-    font-size: 2em;
+#demo{
+    width:50%;
+    min-height: 350px;
+    height:inherit;
+    margin: 10px auto 10px auto;
+    z-index: 2;
+}
+#beach{
+    height:100%;
+}
+.carousel-item > img{
+    background-color: white;
+    border: solid white 5px;
+    width: 75%;
+    min-height: 350px;
+    max-height: 725px;
+}
+.carousel-caption{
+    color: var(--second-page-color-1);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0px;
+    margin: 0px auto;
+
+}
+.frames{
+    width: 90%;
+    min-width: 150px;
+    /* display: inline-block; */
+    margin: 15px auto;
+    background-color: var(--second-page-color-1);
+    padding: 0px;
+    /* border: solid White 2px; */
+    color: var(--paragraph-font-color-1); 
+    vertical-align: top;
+    text-align: left;
 }
 
+.clickables{
+    background-color: white;
+    width: 100%;
+    color: black;
+    padding: 10px;
+}
+
+.clickabes > p{
+    width: 50%;
+}
+.text-hover{
+    font-size: 2em;
+}
+.hover{
+    border: solid 2px white;
+    background-color: white;
+    color: var(--second-page-color-1);
+    padding:0px
+}
+.other-hover{
+    background-color: var(--second-page-color-1);
+    border: solid var(--second-page-color-1) 2px;
+    color: white;
+    padding:0px;
+
+}
+.main-button{
+    background-color: var(--second-page-color-1);
+    color: white;
+    border: none;
+    font-size: 2em;
+    /* border: solid white 2px; */
+    padding:0px;
+    margin: 10px 0px;
+}
+.text-button{
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 1.5em;
+    display: block;
+    margin: 10px 10px 10px 0px;
+}
+.frames > p, .frames > li{
+    font-size: 1em;
+}
+
+#UNCC > img, #Coding-Dojo > img, #awards > img {
+    width: 98%;
+    margin: 10px auto;
+    border: solid white 10px;
+    max-width: 350px;
+}
+
+#prizes{
+    font-size: 1.25em;
+}
+#info{
+    width: 95%;
+    min-width: 150px;
+    display: inline-block;
+    margin: 15px auto;
+    background-color: white;
+    padding: 25px 0px;
+    /* border: solid white 2px; */
+    color: black; 
+    vertical-align: top;
+}
+
+#info > p{
+    width: 90%;
+    margin: 0px auto;
+    text-align: left;
+    line-height: 2em;
+}
 
 #text{
     width: 60%;
@@ -101,7 +212,7 @@ footer{
     color: var(--titles-font-color-1);
     /* border: solid white 2px; */
     margin: 0px auto;
-    z-index: 1;
+    z-index: 9;
 }
 footer > p{
     display: inline;
@@ -112,7 +223,6 @@ a > img{
     width: .75em;
     height: .75em;
 }
-
 
 
 @media only screen and (max-width: 723px) {
@@ -149,7 +259,20 @@ a > img{
         border: solid white 2px;
         color: var(--paragraph-font-color-1); 
     }
-    
+    #demo{
+        width:90%;
+        height: inherit;
+        min-height: 350px;
+        margin: 10px auto 10px auto;
+    }
+
+    .frames{
+        width: 90%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px auto;
+        padding: 15px;
+    }
     footer{
         width:100%;
     }
@@ -194,6 +317,17 @@ a > img{
         border: solid white 2px;
         color: var(--paragraph-font-color-1); 
     }
+    #pics > img {
+        width: 98%;
+        margin: 10px auto;
+        border: solid white 10px;
+    }
+    #demo{
+        width:90%;
+        height: inherit;
+        min-height: 350px;
+        margin: 10px auto 10px auto;
+    }
     
     footer{
         width:100%;
@@ -220,6 +354,13 @@ a > img{
     }
     .containers > h2{
         font-size: 1.75em;
+    }
+    .frames{
+        width: 90%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px auto;
+        padding: 15px;
     }
     #text{
         width: 90%;
@@ -281,7 +422,38 @@ a > img{
         border: solid white 2px;
         color: var(--paragraph-font-color-1); 
     }
-    
+    #demo{
+        width:95%;
+        height: inherit;
+        min-height: 350px;
+        margin: 10px auto 10px auto;
+    }
+    .frames{
+        margin: 15px auto;
+        padding: 15px;
+    }
+    #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    }
+    .main-button{
+        background-color: var(--second-page-color-1);
+        color: white;
+        border: none;
+        font-size: 1.75em;
+        /* border: solid white 2px; */
+        padding:0px;
+    }
+    #one{
+        font-size: 1.5em;
+    }
+    .hover{
+        border: solid 2px white;
+        background-color: white;
+        color: var(--second-page-color-1);
+        padding:0px
+    }
     footer{
         width:100%;
     }
@@ -320,6 +492,54 @@ a > img{
         padding: 15px;
         border: solid white 2px;
         color: var(--paragraph-font-color-1); 
+    }
+    #demo{
+        width:90%;
+        height: inherit;
+        min-height: 350px;
+        margin: 10px auto 10px auto;
+    }
+    .carousel-item > img{
+        background-color: white;
+        border: solid white 5px;
+        width: 90%;
+        min-height: 350px;
+        max-height: 725px;
+    }
+    #Why{
+        font-size: 1.5em;
+    }
+    #info{
+        width: 90%;
+    }
+
+    .frames{
+        width: 90%;
+        display: block;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    #awards > img{
+        display: block;
+        width: 80%;
+        margin:10px auto;
+    }
+    .main-button{
+        background-color: var(--second-page-color-1);
+        color: white;
+        border: none;
+        font-size: 1.5em;
+        /* border: solid white 2px; */
+        padding:0px;
+    }
+    #one{
+        font-size: 1.33em;
+    }
+    .hover{
+        border: solid 2px white;
+        background-color: white;
+        color: var(--second-page-color-1);
+        padding:0px
     }
 
     footer{
